@@ -1,4 +1,4 @@
-## makeCacheMatrix is used to store functions 
+## "makeCacheMatrix" is used to store functions 
 ## related to the data and the result.
     ## It define 4 sub-function including 
        ## input data matrix, 
@@ -6,14 +6,19 @@
        ## input the result which is calculated from cacheSolve , 
        ## and return the inputted result .
 
-## cacheSolve is used to store functions
+## "cacheSolve" is used to store functions
 ## related to calculate the results and check the cache of result
 
 
+## Note: 
+   ## In order to avoid some confusing, 
+   ## I used different arguments for these two function.
+   ## x1 with m1 for "makeCacheMatrix".  
+   ## x2 with m2 for "cacheSolve".  
 
 
 ## Created 4 subfunction. They are used in the way of cache  
-makeCacheMatrix <- function(x1 = numeric()) {
+ makeCacheMatrix <- function(x1 = numeric()) {
         m1 <- NULL
 		
         set <- function(y) {             ## Alternative way to input data
@@ -40,7 +45,7 @@ makeCacheMatrix <- function(x1 = numeric()) {
 
 
 ## Calculate & Return a matrix that is the inverse of 'x' 
-cacheSolve <- function(x2, ...) {
+ cacheSolve <- function(x2, ...) {
         m2 <- x2$getinverse()        ## Retrive m1 from makeCacheMatrix 
                                      ## (renamed as m2 here)
         
